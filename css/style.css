@@ -1,0 +1,258 @@
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  background-color: var(--verydarkblue);
+}
+
+/* Colors Style*/
+:root {
+  --verydarkblue: hsl(233, 47%, 7%);
+  --darkdesaturatedblue: hsl(244, 38%, 16%);
+  --softviolet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --mainparagraphwhite: hsla(0, 0%, 100%, 0.75);
+  --statheadingswhite: hsla(0, 0%, 100%, 0.6);
+}
+
+/* Desktop Style */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 200px;
+  background-color: var(--darkdesaturatedblue);
+  padding: 80px 50px;
+  border-radius: 8px 0 0 8px;
+}
+
+.box-1 h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--white);
+  width: 450px;
+}
+
+.box-1 span {
+  color: var(--softviolet);
+}
+
+.box-1 h4 {
+  font-family: "Inter", sans-serif;
+  color: var(--statheadingswhite);
+  font-size: 13px;
+  font-weight: 100;
+  padding-top: 20px;
+  width: 350px;
+  line-height: 1.5rem;
+}
+
+.box-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+  width: 350px;
+}
+
+.stats-blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.box-numbers h5 {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.box-numbers p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--statheadingswhite);
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.box-2 {
+  background-color: var(--softviolet);
+  border-radius: 0 8px 8px 0;
+  margin-top: 182px;
+  width: 540px;
+  height: 440px;
+}
+
+img {
+  mix-blend-mode: multiply;
+}
+
+.img-mobile {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 15px;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution p {
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--mainparagraphwhite);
+}
+
+.attribution a {
+  font-size: 14px;
+  color: var(--white);
+}
+
+#name {
+  text-decoration: none;
+}
+
+/* Tablet Style */
+@media only screen and (max-width: 768px) {
+  .img-mobile {
+    display: initial;
+    width: 700px;
+    border-radius: 8px 8px 0 0;
+    margin-top: 200px;
+    margin-left: 32px;
+    margin-bottom: -205px;
+  }
+
+  .box-2 {
+    background-color: var(--softviolet);
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  img {
+    mix-blend-mode: luminosity;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-1 {
+    width: 700px;
+    border-radius: 0;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    margin-left: -4px;
+  }
+
+  .box-1 h1 {
+    font-size: 40px;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .box-1 h4 {
+    font-size: 26px;
+    line-height: 2.5rem;
+    width: 450px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .box-numbers {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .stats-blocks {
+    margin-top: 20px;
+    margin-left: 290px;
+  }
+
+  .box-numbers h5 {
+    font-size: 30px;
+  }
+
+  .box-numbers p {
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  footer {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile Style  */
+@media only screen and (max-width: 480px) {
+  .img-mobile {
+    width: 450px;
+    margin-left: 15px;
+  }
+
+  .box-1 {
+    width: 450px;
+    margin-left: 0.5px;
+  }
+
+  .box-1 h1 {
+    font-size: 42px;
+    width: 440px;
+    margin-top: 20px;
+    margin-left: -18px;
+  }
+
+  .box-1 h4 {
+    margin-top: 15px;
+    font-size: 22px;
+    width: 380px;
+  }
+
+  .stats-blocks {
+    margin-top: 0;
+    margin-left: 28px;
+  }
+
+  .attribution p {
+    font-size: 18px;
+  }
+
+  .attribution a {
+    font-size: 18px;
+  }
+}
